@@ -4,7 +4,7 @@
 #import "tequila-sunset.typ": *
 
 
-#let date = "31 July 2025"
+#let date = "30 July 2025"
 #let me = "Joseph Hall"
 #let location = "Astro Lunch Meeting"
 #let short_title = "Progress Update"
@@ -126,6 +126,59 @@
   ]
 
   #v(20pt)
+]
+
+#slide[
+  = Galaxy Clusters: They're Like Dragons.
+  
+  #uncover((2,3,4,5))[
+  They're the _largest gravitationally bound objects_,  only 20% of their baryons are in stars, the rest is in the X-ray emitting #[#set text(fill: PRIMARY_COLOR)
+  *ICM*].]
+
+  #only(2)[
+    #[
+      #set align(center)
+      #image("assets/X-ray_and_optical_view_of_the_Perseus_galaxy_cluster.png", width: 70%)
+    ]
+    #v(1fr)
+    #[
+      #set text(size:15pt)
+      #set align(right)
+      _Image Credit: ESA/XMM-Newton/DSS-II/J. Sanders et al. 2019_
+    ]
+    #v(10pt)
+  ]
+  #only((3,4,5))[
+    #grid(
+      columns: (50%, 1fr),
+      column-gutter: 10pt,
+      [
+        Studying the properties of the ICM allows us to construct #[#set text(fill: PRIMARY_COLOR) 
+        *scaling relations*] for samples of clusters.
+
+        #uncover((5,4))[
+        Assuming that only gravity dictates these properties, the scaling relations can be fit by the #[#set text(fill: PRIMARY_COLOR)
+        *self-similar model*].
+        ]
+
+        #uncover(5)[
+          Deviations from the model are the result of extra astrophysics.
+        ]
+      ],
+      [
+        #uncover((5,4))[
+          #image("assets/self-similar.png", width:98%)
+          #v(1fr)
+          #[
+            #set text(size:15pt)
+            #set align(right)
+            _Image Credit: Lovisari & Maughan 2022_
+          ]
+          #v(10pt)
+        ]
+      ]
+    )
+  ]
 ]
 
 #slide[
