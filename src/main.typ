@@ -337,7 +337,7 @@
     columns: (50%, 1fr),
     column-gutter: 10pt,
     [
-      #uncover((2,3,4))[
+      #uncover((2,3,4,))[
         For the #teq-emph("X-ray selected", fill_col: TERTIARY_COLOR) sample, I continued using the primary eRASS1 cluster catalogue of >12,000 clusters.
       ]
 
@@ -365,6 +365,56 @@
       _Image Credit: Bulbul et al. 2024_
     ]
     #v(10pt)
+  ]
+]
+
+#slide[
+  = Choosing a Catalogue -- #teq-emph("Optical")
+  For my samples, the catalogues I chose to use needed to have high #teq-emph("completeness") and #teq-emph("purity").
+
+  #only((2,3))[
+    At first, I considered using catalogues based on #teq-emph("DES") data, as it covers the southern eROSITA sky and was well used at a conference
+
+    #only(2)[
+      DES MOC
+    ]
+
+    #only(3)[
+      #set align(center)
+      #v(1fr)
+      But the only catalogue available in September was for "Science Validation" and contained a mere #teq-emph("787 clusters").
+      
+      Not nearly enough!
+      #v(1fr)
+    ]
+  ]
+
+  #only((4,5,6,7))[
+    Next looked at the #teq-emph("DESI") catalogues, which cover more of the sky and have many more clusters.
+
+    #[
+      #set text(size: 20pt)
+      #set align(center)
+      #only(5)[
+        #image("assets/clumpr.png", width: 60%)
+        Yantovski-Barth et al. (2023) -- \~300,000 clusters
+      ]
+      #only(6)[
+        #image("assets/zou.png", width: 60%)
+        Zou et al. (2023) -- 540,432 clusters
+      ]
+      #only(7)[
+        #image("assets/wenhan.png", width: 60%)
+        Wen & Han (2024) -- >1.5 million clusters
+      ]
+    ]
+  ]
+]
+
+#slide[
+  = Choosing a Catalogue -- #teq-emph("Optical")
+  #only(8)[
+    To decide which of these three to use, I identified a region on the sky they overlapped with each other and
   ]
 ]
 
