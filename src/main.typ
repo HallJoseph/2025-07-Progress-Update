@@ -267,7 +267,51 @@
 
 #slide[
   = Last Update
+  In September, I  presented these results from eRASS flux selected clusters and #[
+    #set text(fill: PRIMARY_COLOR)
+    *richness ($lambda$)*] selected from the DES science verification catalogue analysed by a pipeline I wrote.
+  #only(1)[
+    #set align(center)
+    #image("assets/prelimsr.svg", width: 70%)
+  ]
 
+  #only((2,3,4,5,6))[
+    #grid(
+      columns: (50%, 1fr),
+      column-gutter: (10pt),
+      [
+        These results are not great...
+
+        #uncover((3,4,5,6))[
+          - Flux rather than #[#set text(fill: TERTIARY_COLOR)
+          *Luminosity ($L$)*] selected X-ray clusters
+        ]
+
+        #uncover((4,5,6))[
+          - Optical sample poorly overlaps X-ray
+        ]
+
+        #uncover((5,6))[
+          - Bad scaling relation fitting
+        ]
+
+        #uncover(6)[
+          Over the past year I have been addressing these issues
+        ]
+      ],
+      [
+        #image("assets/prelimsr_narrow.png")
+      ]
+    )
+  ]
+  
+  #v(1fr)
+          #[
+            #set text(size:15pt)
+            #set align(right)
+            _Bulbul et al. 2024, Rykoff et al. 2016_
+          ]
+          #v(10pt)
 ]
 
 #set page(
