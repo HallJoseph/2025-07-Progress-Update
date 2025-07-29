@@ -401,7 +401,7 @@
       ]
       #only(6)[
         #image("assets/zou.png", width: 60%)
-        Zou et al. (2023) -- 540,432 clusters
+        Zou et al. (2021) -- 540,432 clusters
       ]
       #only(7)[
         #image("assets/wenhan.png", width: 60%)
@@ -413,9 +413,52 @@
 
 #slide[
   = Choosing a Catalogue -- #teq-emph("Optical")
-  #only(8)[
-    To decide which of these three to use, I identified a region on the sky they overlapped with each other and
+  To decide which of these three to use, I selected a sample of each from a region on the sky they overlapped with each other.
+
+  #only(1)[
+    #set align(center)
+    #image("assets/test_region.png", width: 90%)
   ]
+
+  #only((2))[
+    I then checked the #teq-emph("redshift") overlap with the eRASS1 catalogue: 
+  ]
+
+  #only(2)[
+    #set align(center)
+    #v(-5pt)
+    #image("assets/zhists.png", width: 60%)
+  ]
+
+  #only(3)[
+    And then cross-matched to it to estimate #teq-emph("purity and completeness"):
+    #set text(size:15pt)
+    #grid(
+      columns: (1fr, 1fr, 1fr),
+      column-gutter: 10pt,
+      [
+        #v(1fr)
+        _Yantovski-Barth et al. (2023)_
+        #v(10pt)
+      ],
+      [
+        #set align(center)
+        #v(1fr)
+        _Zou et al. (2021)_
+        #v(10pt)
+      ],
+      [
+        #set align(right)
+        #v(1fr)
+        _Wen & Han (2024)_
+        #v(10pt)
+      ]
+    )
+  ]
+]
+
+#slide[
+  #emph-slide("Wen & Han (2024) is the\nbest optical catalogue for the work\nI want to do.")
 ]
 
 #[
