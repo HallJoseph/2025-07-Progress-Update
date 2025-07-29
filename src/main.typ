@@ -271,7 +271,8 @@
   = Last Update
   In September, I  presented these results from eRASS flux selected clusters and #[
     #set text(fill: PRIMARY_COLOR)
-    *richness ($lambda$)*] selected from the DES science verification catalogue analysed by a pipeline I wrote.
+    *richness ($lambda$)*]
+    selected from the SDSS survey analysed by a pipeline I wrote.
   #only(1)[
     #set align(center)
     #image("assets/prelimsr.svg", width: 70%)
@@ -312,17 +313,10 @@
           #[
             #set text(size:15pt)
             #set align(right)
-            _Bulbul et al. 2024, Rykoff et al. 2016_
+            _Bulbul et al. 2024, Rykoff et al. 2014_
           ]
           #v(10pt)
 ]
-
-#set page(
-    header: [
-      #set align(right)
-      *Last Update*
-    ]
-  )
 
 #[
   #section-header("SAMPLE\nSELECTION")
@@ -334,6 +328,45 @@
       *Sample Selection*
     ]
   )
+
+#slide[
+  = Choosing a Catalogue -- #teq-emph("X-rays", fill_col: TERTIARY_COLOR)
+  For my samples, the catalogues I chose to use needed to have high #teq-emph("completeness", fill_col: TERTIARY_COLOR) and #teq-emph("purity", fill_col: TERTIARY_COLOR).
+
+  #grid(
+    columns: (50%, 1fr),
+    column-gutter: 10pt,
+    [
+      #uncover((2,3,4))[
+        For the #teq-emph("X-ray selected", fill_col: TERTIARY_COLOR) sample, I continued using the primary eRASS1 cluster catalogue of >12,000 clusters.
+      ]
+
+      #uncover((3,4))[
+        Comparisons with the eRASS1 digital twin estimate full catalogue purity of #teq-emph("86%", fill_col: TERTIARY_COLOR) and completeness of #teq-emph("~90%", fill_col: TERTIARY_COLOR).
+      ]
+    ],
+    [
+      #set align(right)
+      #uncover((2,3,4))[
+        #image("assets/fig14a.png")
+      ]
+    ]
+  )
+
+  #uncover(4)[
+    Recent work in Balzer et al. (2025) has identified #teq-emph("1,000s", fill_col: TERTIARY_COLOR) more clusters in the eRASS1 data
+  ]
+
+  #uncover((2,3,4))[
+    #v(1fr)
+    #[
+      #set text(size:15pt)
+      #set align(right)
+      _Image Credit: Bulbul et al. 2024_
+    ]
+    #v(10pt)
+  ]
+]
 
 #[
   #section-header("DATA\nANALYSIS")

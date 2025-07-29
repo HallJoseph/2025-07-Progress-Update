@@ -64,3 +64,8 @@
   )
   title
 }
+
+#let teq-emph(str, fill_col: PRIMARY_COLOR) = {
+  set text(fill: fill_col, weight: "black")
+  str
+}
