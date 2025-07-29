@@ -261,7 +261,13 @@
 ]
 
 #slide[
-  #section-header("LAST\nUPDATE")
+  #emph-slide("Combinging eROSITA data with clusters found in wide optical surveys gives the ideal platform to test these biases
+  ", bg_colour: TERTIARY_COLOR)
+]
+
+#slide[
+  = Last Update
+
 ]
 
 #set page(

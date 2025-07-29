@@ -7,6 +7,7 @@
 
 #let PRIMARY_COLOR = rgb("#e07523ed")
 #let SECONDARY_COLOR = rgb("#ffffff")
+#let TERTIARY_COLOR = rgb("2AAFEE")
 #let TEXT_COLOR = black.lighten(25%)
 
 #let tequila-sunset-theme(me, location, short_title, date: datetime.today().display(),  aspect-ratio: "4-3",  body) = {
@@ -44,6 +45,22 @@
     fill: text_colour,
     size: 60pt,
     weight: "black"
+  )
+  title
+}
+
+#let emph-slide(title, bg_colour: TERTIARY_COLOR, text_colour: SECONDARY_COLOR) = {
+  set page(
+    fill: bg_colour,
+    footer: "",
+    header: ""
+  )
+  set align(horizon)
+  set align(center)
+  set text(
+    fill: text_colour,
+    size: 40pt,
+    weight: "bold"
   )
   title
 }
