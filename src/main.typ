@@ -182,6 +182,85 @@
 ]
 
 #slide[
+  = Cluster Cosmology
+  
+  Counting the number of clusters in the universe can help to constrain cosmological parameters, particulary #[#set text(fill: PRIMARY_COLOR)
+        *$sigma_8$*] and #[#set text(fill: PRIMARY_COLOR)
+        *$Omega#sub[M]$*]
+
+  #only(1)[
+    #set align(center)
+    #image("assets/cosmo_constraints.svg", width: 70%)
+    #v(1fr)
+    #[
+      #set text(size:15pt)
+      #set align(right)
+      _Image Credit: Ghirardini et al. 2024_
+    ]
+    #v(10pt)
+  ]
+
+  #only((2,3,4))[
+    #grid(
+      columns: (45%, 1fr),
+      column-gutter: 10pt,
+      [
+        #uncover((2,3,4))[
+          To do this effectively we need accurate #[#set text(fill: PRIMARY_COLOR)
+        *selection functions*] 
+        ]
+
+        #uncover((3,4))[
+        These need to be taken from #[#set text(fill: PRIMARY_COLOR)
+        *large, unbiased samples*]
+        ]
+
+        #uncover(4)[
+          Andreon et al. (2016) found diffs in scaling rels for #[#set text(fill: PRIMARY_COLOR)
+          *optical and X-ray clusters*] 
+        ]
+      ],
+      [
+        #only(2)[
+          #v(-25pt)
+          #image("assets/erass_selection.svg", width: 100%)
+          #v(1fr)
+          #[
+            #set text(size:15pt)
+            #set align(right)
+            _Image Credit: Clerc et al. 2024_
+          ]
+          #v(10pt)
+        ]
+
+        #only(3)[
+          #image("assets/fig6.png")
+          #v(1fr)
+          #[
+            #set text(size:15pt)
+            #set align(right)
+            _Image Credit: Bulbul et al. 2024_
+          ]
+          #v(10pt)
+        ]
+
+        #only(4)[
+          #v(70pt)
+          #image("assets/andreoplot.png")
+          #v(1fr)
+          #[
+            #set text(size:15pt)
+            #set align(right)
+            _Image Credit: Andreon et al. 2016_
+          ]
+          #v(10pt)
+        ]
+      ]
+    )
+  ]
+]
+
+#slide[
   #section-header("LAST\nUPDATE")
 ]
 
