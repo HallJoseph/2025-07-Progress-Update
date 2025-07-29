@@ -167,6 +167,7 @@
       ],
       [
         #uncover((5,4))[
+          #set align(right)
           #image("assets/self-similar.png", width:98%)
           #v(1fr)
           #[
@@ -221,8 +222,9 @@
         ]
       ],
       [
+        #set align(right)
         #only(2)[
-          #v(-25pt)
+          #v(-23pt)
           #image("assets/erass_selection.svg", width: 100%)
           #v(1fr)
           #[
@@ -261,7 +263,7 @@
 ]
 
 #slide[
-  #emph-slide("Combinging eROSITA data with clusters found in wide optical surveys gives the ideal platform to test these biases
+  #emph-slide("Combining eROSITA data with clusters found in wide optical surveys gives the ideal platform to test these biases
   ", bg_colour: TERTIARY_COLOR)
 ]
 
@@ -280,18 +282,18 @@
       columns: (50%, 1fr),
       column-gutter: (10pt),
       [
-        These results are not great...
+        They are not great...
 
-        #uncover((3,4,5,6))[
+        #only((3,4,5,6))[
           - Flux rather than #[#set text(fill: TERTIARY_COLOR)
           *Luminosity ($L$)*] selected X-ray clusters
         ]
 
-        #uncover((4,5,6))[
+        #only((4,5,6))[
           - Optical sample poorly overlaps X-ray
         ]
 
-        #uncover((5,6))[
+        #only((5,6))[
           - Bad scaling relation fitting
         ]
 
@@ -300,11 +302,12 @@
         ]
       ],
       [
+        #set align(right)
         #image("assets/prelimsr_narrow.png")
       ]
     )
   ]
-  
+
   #v(1fr)
           #[
             #set text(size:15pt)
