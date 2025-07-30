@@ -31,43 +31,21 @@
       X-ray Properties of 
       
       Galaxy Clusters with 
+      
+      _eROSITA_
     ]
     [
-      #grid(
-        columns: (50%, 1fr),
-        column-gutter: 10pt,
-        [      
-          #[
-            #set text(size: 70pt, weight:"bold", font:"Charter")
-            #set par(spacing: 16pt)
-            _eROSITA_
-          ]
-          #v(1fr)
-          #[
-            #set text(fill: SECONDARY_COLOR)
-            #set text(size: 30pt, weight:"bold")
-            Progress Update
-          ]
-          #[
-            #set text(fill: SECONDARY_COLOR)
-            #v(1fr)
+      #set text(fill: SECONDARY_COLOR)
+      #set align(right)
+      #v(1fr)
 
-            #me #h(1fr) 
-          
-            #emph[#location]
+      *#me*
+    
+      #emph[#location]
 
-            #v(1fr)
+      #v(1fr)
 
-            #date
-          ]          
-        ],
-        [
-          /* TODO: nice image here to represent the theme of the talk */
-          /* PLACEHOLDER FOR NOW */
-          #v(1fr)
-          #image("assets/scalingrels.svg", width: 100%)
-        ]
-      )
+      #date
     ]
 }
 
@@ -548,6 +526,29 @@
     #v(10pt)
 ]
 
+#slide[
+  = Scaling Relations -- Set-up
+
+  I measured luminsoities ($L$) with #teq-emph("XGA") and took richnesses ($lambda$) from the #teq-emph("Wen & Han (2024)") catalogue for all clusters in the samples.
+  
+  #uncover((2,3,4))[
+    Uncertainties were taken from the XGA results for $L$ and as the square root era on the number of galaxies in the cluster for $lambda$
+  ]
+
+  #uncover((3,4))[
+    Produced two scaling relations for each of the cluster samples: #[#set text(fill: PRIMARY_COLOR)
+      *$L-T$*] & #[#set text(fill: PRIMARY_COLOR)
+      *$L-lambda$*]
+  ]
+
+
+  #uncover((4))[
+    Accounted for cluster evolution by dividing $L$ for each cluster by: 
+    #set align(center)
+    $E(z)^gamma = (sqrt(Omega_M (1+z)^3 + Omega_k (1+z)^2 + Omega_lambda))^gamma$.
+  ]
+]
+
 #[
   #section-header("RESULTS")
 ]
@@ -559,3 +560,6 @@
     ]
   )
 
+#slide[
+  #image("assets/scalingrels.svg")
+]
