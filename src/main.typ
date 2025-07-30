@@ -54,6 +54,14 @@
 ]
 
 #slide[
+  #section-header("News?")
+]
+
+#slide[
+  #title-slide()
+]
+
+#slide[
   #section-header("BACKGROUND")
 ]
 
@@ -546,6 +554,23 @@
     Accounted for cluster evolution by dividing $L$ for each cluster by: 
     #set align(center)
     $E(z)^gamma = (sqrt(Omega_M (1+z)^3 + Omega_k (1+z)^2 + Omega_lambda))^gamma$.
+  ]
+]
+
+#slide[
+  = Scaling Relations -- Fitting
+  Rather than simple least squares regression I used Sereno~(2015)\'s #teq-emph("LI")near #teq-emph("R")egression in #teq-emph("A")stronomy (LIRA) package.
+
+  #uncover((2,3,4))[
+    Improvement as it does #teq-emph("Bayesian") linear regression and can account for intrinsic scatters and biases from selection effects. 
+  ]
+
+  #uncover((3,4))[
+    To aid LIRA and #teq-emph("reduce degeneracies"), I set pivots on my data at: $L_0 = 10^(43)$ erg s#super($-1$), $k T_0 = 3.55$ keV, and $lambda_0 = 109$. 
+  ]
+
+  #uncover(4)[
+    For bias modelling, I set these thresholds: $L$#sub("thresh") $ = 10^(43.5)$ erg s#super($-1$) and $lambda$#sub("thresh") $ = 10$ for the #teq-emph("eRASS selected", fill_col: TERTIARY_COLOR) clusters, and $lambda$#sub("thresh") $ = 43.7$ for the #teq-emph("optically selected") sample.
   ]
 ]
 
