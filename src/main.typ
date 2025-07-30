@@ -588,3 +588,33 @@
 #slide[
   #image("assets/scalingrels.svg")
 ]
+
+#slide[
+  = Discussion
+  #grid(
+    columns: (50%, 1fr),
+    column-gutter: 10pt,
+    [ 
+      The optical sample has a #[#set text(fill: PRIMARY_COLOR)
+      *steeper slope ($beta$)*] for both relations.
+
+      #uncover((2,3,4))[
+        BUT the errors on these results are still very large...
+      ]
+
+      #uncover((3,4))[
+        Differences in #[#set text(fill: PRIMARY_COLOR)
+      *scatter ($sigma$)*] are significant, which needs further investigation.
+      ]
+
+      #uncover((4))[
+        Similar to Andreon et al. (2016), we see a lot of high $lambda$, low $L$ clusters in the optical sample missed by the X-ray
+      ]
+    ],
+    [
+      #set align(right)
+      #image("assets/restab.svg", width: 100%)
+      #image("assets/scalingrels.svg")
+    ]
+  )
+]
