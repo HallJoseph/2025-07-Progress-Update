@@ -75,17 +75,15 @@
 #slide[
   = A New Era
   This is an exciting time for wide field cosmological surveys:
-  #v(10pt)
 
   /* Build MOCS here showing where data are on sky for these surveys */
   /* PLACEHOLDER MOC */
-  #uncover((2, 3))[
-    #set align(center)
-    #image("assets/moc_for_progress.svg", width: 70%)
-  ]
-
-  #v(1fr)
   #only((2))[
+    
+    #set align(center)
+    #image("assets/erosita_view.png", width: 70%)
+    
+    #set align(left)
     #set par(spacing: 10pt)
     For 2.5 years from 2019 #[#set text(fill: PRIMARY_COLOR)
      *eROSITA*] mapped the X-ray sky, so far providing 2 data releases 
@@ -93,11 +91,17 @@
     #[
       #set text(size:15pt)
       #set align(right)
-      (_Brunner et al. 2022_, _Merloni et al. 2024_)
+      _Brunner et al. 2022_, _Merloni et al. 2024_
+
+      _Image Credit: Jeremy Sanders, Hermann Brunner and the eSASS team (MPE); Eugene Churazov, Marat Gilfanov (on behalf of IKI)_
     ]
   ]
 
   #only(3)[
+    #set align(center)
+    #image("assets/DESI_moc.png", width:70%)
+
+    #set align(left)
     #set par(spacing: 10pt)
     The optical sky has been well-mapped by #[#set text(fill: PRIMARY_COLOR)
      *DES*] and #[#set text(fill: PRIMARY_COLOR)
@@ -107,7 +111,9 @@
     #[
       #set text(size:15pt)
       #set align(right)
-      (_DES Collaboration 2021_, _Dey et al. 2022_, _Euclid Collaboration 2025_)
+      _DES Collaboration 2021_, _Dey et al. 2022_, _Euclid Collaboration 2025_
+
+      _Image credit: Wen & Han 2024 via VizieR_
     ]
   ]
 
@@ -617,4 +623,42 @@
       #image("assets/scalingrels.svg")
     ]
   )
+]
+
+#slide[
+  = Future Work
+  
+  My samples are currently very #teq-emph("incomplete"). I have used only 35 from each selection method of a possible 500 that I identified during sample selection:
+
+  #image("assets/remaining_clusts.svg", width:90%)
+]
+
+#slide[
+  #set page(
+    fill: TERTIARY_COLOR,
+    footer: "",
+    header: ""
+  )
+  #set text(fill: SECONDARY_COLOR, size: 30pt)
+
+  = SUMMARY
+  #v(20pt)
+  #list(
+    tight: false,
+    marker: "‣"
+  )[
+    Previous works have suggested that we are missing clusters, impacting cosmology
+  ][
+    I am trying to investigate this by comparing scaling relations of cluster properties
+  ][
+    Currently, the results are inconclusive but indicate that there might be something going on
+  ][
+    The more complete sample will help 
+  ]
+
+  #v(20pt)
+  #uncover(2)[
+    #set align(center)
+    ANY QUESTIONS?
+  ]
 ]
