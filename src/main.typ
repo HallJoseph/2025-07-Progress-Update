@@ -484,7 +484,7 @@
 
 #slide[
   = Final Samples
-  Redid the cross-matching but changed the search area to be where the eRASS1 exposure > 170 s & where the #teq-emph("eRASS sky", fill_col: TERTIARY_COLOR) intersects with the #teq-emph("Wen & Han field") for $0.1 < z < 0.2$
+  Redid the cross-matching but changed the search area to be where the eRASS1 exposure > 170 s & where the #teq-emph("eRASS sky", fill_col: TERTIARY_COLOR) intersects with the #teq-emph("Wen & Han field") for $0.1 < z < 0.2$.
 
   #uncover(2)[
     #v(-20pt)
@@ -505,6 +505,48 @@
     ]
   )
 
+#slide[
+  = #teq-emph("X")-rays #teq-emph("G")enerate and #teq-emph("A")nalyse
+  #grid(
+    columns: (1fr, 20%, 20%),
+    column-gutter: 10pt,
+    [
+      A mission agnostic platform for processing and analysing X-ray data.
+
+      #uncover((2,3))[
+        More advanced and mature than my pipeline and can handle data from other missions.
+      ]
+    ],
+    [
+      #image("assets/daxa.svg", width:100%)
+    ],
+    [
+      #image("assets/XGA.svg", width: 100%)
+    ]
+  )
+  #uncover(3)[
+    #grid(
+      columns: (60%, 1fr),
+      column-gutter: 10pt,
+      [
+        #image("assets/kt_comp.png", width: 100%)
+      ],
+      [
+        #v(10pt)
+        Validated XGA results by comparing its cluster temperatures with those from the eRASS catalogue.
+      ]
+    )
+  ]
+
+  #v(1fr)
+  #v(1fr)
+    #[
+      #set text(size:15pt)
+      #set align(right)
+      _Turner et al. 2022, 2024a, 2024b_
+    ]
+    #v(10pt)
+]
 
 #[
   #section-header("RESULTS")
