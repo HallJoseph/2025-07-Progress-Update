@@ -430,25 +430,45 @@
     #image("assets/zhists.png", width: 60%)
   ]
 
-  #only(3)[
-    And then cross-matched to it to estimate #teq-emph("purity and completeness"):
+  #only((3))[
+    #grid(    
+      columns:(50%, 1fr),
+      column-gutter: 10pt,
+      [
+        And then cross-matched to it to estimate #teq-emph("purity and completeness"):
+      ],
+      [
+        #only(3)[
+          #image("assets/cluster_matching_flowchart_helvetica.svg", width:70%)
+      ]
+    ]
+    )
+  ]
+  #only(4)[
+    And then cross-matched to it to estimate #teq-emph("purity and completeness")
     #set text(size:15pt)
     #grid(
       columns: (1fr, 1fr, 1fr),
       column-gutter: 10pt,
       [
+        #v(15pt)
+        #image("assets/clumpr_richness.png")
         #v(1fr)
         _Yantovski-Barth et al. (2023)_
         #v(10pt)
       ],
       [
+        #v(15pt)
         #set align(center)
+        #image("assets/zou_richness.png")
         #v(1fr)
         _Zou et al. (2021)_
         #v(10pt)
       ],
       [
+        #v(15pt)
         #set align(right)
+        #image("assets/wenhan_richness.png")
         #v(1fr)
         _Wen & Han (2024)_
         #v(10pt)
@@ -457,8 +477,21 @@
   ]
 ]
 
+
 #slide[
   #emph-slide("Wen & Han (2024) is the\nbest optical catalogue for the work\nI want to do.")
+]
+
+#slide[
+  = Final Samples
+  Redid the cross-matching but changed the search area to be where the eRASS1 exposure > 170 s & where the #teq-emph("eRASS sky", fill_col: TERTIARY_COLOR) intersects with the #teq-emph("Wen & Han field") for $0.1 < z < 0.2$
+
+  #uncover(2)[
+    #v(-20pt)
+    #set align(center)
+    #image("assets/moc_for_progress.svg")
+  ]
+
 ]
 
 #[
