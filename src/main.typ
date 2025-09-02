@@ -251,7 +251,7 @@
   ", bg_colour: TERTIARY_COLOR)
 ]
 
-#slide[
+/* #slide[
   = Last Update
   In September, I  presented these results from eRASS flux selected clusters and #[
     #set text(fill: PRIMARY_COLOR)
@@ -301,6 +301,7 @@
           ]
           #v(10pt)
 ]
+*/
 
 #[
   #section-header("SAMPLE\nSELECTION")
@@ -322,7 +323,7 @@
     column-gutter: 10pt,
     [
       #uncover((2,3,4,))[
-        For the #teq-emph("X-ray selected", fill_col: TERTIARY_COLOR) sample, I continued using the primary eRASS1 cluster catalogue of >12,000 clusters.
+        For the #teq-emph("X-ray selected", fill_col: TERTIARY_COLOR) sample, I used the primary eRASS1 cluster catalogue of >12,000 clusters.
       ]
 
       #uncover((3,4))[
@@ -357,19 +358,34 @@
   For my samples, the catalogues I chose to use needed to have high #teq-emph("completeness") and #teq-emph("purity").
 
   #only((2,3))[
-    At first, I considered using catalogues based on #teq-emph("DES") data, as it covers the southern eROSITA sky and was well used at a conference
+    At first, I considered using catalogues based on #teq-emph("DES") data, as it covers the southern eROSITA sky with the highest exposure
 
     #only(2)[
-      DES MOC
+      #set align(center)
+      #image("assets/DESObservingStrategy_Lahav2016-768x460.png", width: 60%)
+
+      #v(1fr)
+      #[
+        #set text(size:15pt)
+        #set align(right)
+        _Image Credit: Lahav et al. 2016_
+      ]
+      #v(10pt)
     ]
 
     #only(3)[
       #set align(center)
       #v(1fr)
-      But the only catalogue available in September was for "Science Validation" and contained a mere #teq-emph("787 clusters").
+      But the only catalogue available at the time was for "Science Validation" and contained a mere #teq-emph("787 clusters").
       
       Not nearly enough!
       #v(1fr)
+      #[
+        #set text(size:15pt)
+        #set align(right)
+        _Rykoff et al. 2016_
+      ]
+      #v(10pt)
     ]
   ]
 
@@ -517,7 +533,7 @@
       ],
       [
         #v(10pt)
-        Validated XGA results by comparing its cluster temperatures with those from the eRASS catalogue.
+        Validated XGA results by comparing its cluster temperatures and luminosities with those from the eRASS catalogue.
       ]
     )
   ]
@@ -535,7 +551,7 @@
 #slide[
   = Scaling Relations -- Set-up
 
-  I measured luminsoities ($L$) with #teq-emph("XGA") and took richnesses ($lambda$) from the #teq-emph("Wen & Han (2024)") catalogue for all clusters in the samples.
+  I measured luminosities ($L$) with #teq-emph("XGA") and took richnesses ($lambda$) from the #teq-emph("Wen & Han (2024)") catalogue for all clusters in the samples.
   
   #uncover((2,3,4))[
     Uncertainties were taken from the XGA results for $L$ and as the square root era on the number of galaxies in the cluster for $lambda$
