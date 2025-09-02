@@ -9,7 +9,7 @@
 #let location = "Astro Lunch Meeting"
 #let short_title = "Progress Update"
 
-#enable-handout-mode(false)
+#enable-handout-mode(true)
 
 #show: tequila-sunset-theme.with(
   me, 
