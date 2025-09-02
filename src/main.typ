@@ -4,12 +4,12 @@
 #import "tequila-sunset.typ": *
 
 
-#let date = "30 July 2025"
+#let date = "4 September 2025"
 #let me = "Joseph Hall"
-#let location = "Astro Lunch Meeting"
-#let short_title = "Progress Update"
+#let location = "New Results in X-Ray Astronomy 2025"
+#let short_title = "Galaxy Clusters with eROSITA"
 
-#enable-handout-mode(true)
+#enable-handout-mode(false)
 
 #show: tequila-sunset-theme.with(
   me, 
@@ -48,14 +48,6 @@
       #date
     ]
 }
-
-#slide[
-  #title-slide()
-]
-
-#slide[
-  #section-header("News?")
-]
 
 #slide[
   #title-slide()
