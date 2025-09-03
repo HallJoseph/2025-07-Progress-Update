@@ -40,11 +40,13 @@
       #set align(right)
       #v(1fr)
 
-      *#me*
-    
-      #emph[#location]
+      *#me* and Ben Maughan
+
+      #emph[#affiliation]
 
       #v(1fr)
+
+      #emph[#location]
 
       #date
     ]
