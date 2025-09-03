@@ -8,6 +8,7 @@
 #let me = "Joseph Hall"
 #let location = "New Results in X-Ray Astronomy 2025"
 #let short_title = "Galaxy Clusters with eROSITA"
+#let affiliation = "University of Bristol"
 
 #enable-handout-mode(false)
 
@@ -353,6 +354,7 @@
   ]
 ]
 
+/*
 #slide[
   = Choosing a Catalogue -- #teq-emph("Optical")
   For my samples, the catalogues I chose to use needed to have high #teq-emph("completeness") and #teq-emph("purity").
@@ -476,22 +478,48 @@
     )
   ]
 ]
-
+*/
 
 #slide[
-  #emph-slide("Wen & Han (2024) is the\nbest optical catalogue for the work\nI want to do.")
+  = Choosing a Catalogue -- #teq-emph("Optical")
+  For my samples, the catalogues I chose to use needed to have high #teq-emph("completeness") and #teq-emph("purity").
+
+  #only((2))[
+    The #teq-emph("DESI") legacy survey has studied large areas of the sky and several cluster catalogues have been produced.
+  ]
+
+  #only(3)[
+    Of these, I used the #teq-emph("Wen & Han (2024)") catalogue of over 1.5~million clusters across the whole sky.
+    
+    #[
+      #set align(center)
+      #image("assets/wenhan.png", width: 60%)
+    ]
+
+    #[
+      #set text(size:15pt)
+      #set align(right)
+      #v(1fr)
+      _Wen & Han (2024)_
+      #v(10pt)
+    ]
+  ]
+
 ]
 
+/*#slide[
+  #emph-slide("Wen & Han (2024) is the\nbest optical catalogue for the work\nI want to do.")
+]*/
+
 #slide[
-  = Final Samples
-  Redid the cross-matching but changed the search area to be where the eRASS1 exposure > 170 s & where the #teq-emph("eRASS sky", fill_col: TERTIARY_COLOR) intersects with the #teq-emph("Wen & Han field") for $0.1 < z < 0.2$.
+  = Sample Cross-Matching
+  Cross-matched the catalogues in a search area where the eRASS1 exposure > 170 s & where the #teq-emph("eRASS sky", fill_col: TERTIARY_COLOR) intersects with the #teq-emph("Wen & Han field") for $0.1 < z < 0.2$.
 
   #uncover(2)[
     #v(-20pt)
     #set align(center)
     #image("assets/moc_for_progress.svg")
   ]
-
 ]
 
 #[
@@ -508,14 +536,11 @@
 #slide[
   = #teq-emph("X")-rays #teq-emph("G")enerate and #teq-emph("A")nalyse
   #grid(
-    columns: (1fr, 20%, 20%),
+    columns: (1fr, 15%, 15%),
     column-gutter: 10pt,
     [
+      #v(10pt)
       A mission agnostic platform for processing and analysing X-ray data.
-
-      #uncover((2,3))[
-        More advanced and mature than my pipeline and can handle data from other missions.
-      ]
     ],
     [
       #image("assets/daxa.svg", width:100%)
@@ -524,16 +549,17 @@
       #image("assets/XGA.svg", width: 100%)
     ]
   )
-  #uncover(3)[
+  #uncover(2)[
     #grid(
-      columns: (60%, 1fr),
+      columns: (55%, 1fr),
       column-gutter: 10pt,
       [
-        #image("assets/kt_comp.png", width: 100%)
+        #set align(center)
+        #image("assets/xga_erass_temps.svg", width: 80%)
       ],
       [
-        #v(10pt)
-        Validated XGA results by comparing its cluster temperatures and luminosities with those from the eRASS catalogue.
+        #v(40pt)
+        Validated XGA results by comparing its cluster temperatures with those from the eRASS catalogue.
       ]
     )
   ]
@@ -554,7 +580,7 @@
   I measured luminosities ($L$) with #teq-emph("XGA") and took richnesses ($lambda$) from the #teq-emph("Wen & Han (2024)") catalogue for all clusters in the samples.
   
   #uncover((2,3,4))[
-    Uncertainties were taken from the XGA results for $L$ and as the square root era on the number of galaxies in the cluster for $lambda$
+    Uncertainties were taken from the XGA results for $L$ and as the square root error on the number of galaxies in the cluster for $lambda$
   ]
 
   #uncover((3,4))[
@@ -565,9 +591,7 @@
 
 
   #uncover((4))[
-    Accounted for cluster evolution by dividing $L$ for each cluster by: 
-    #set align(center)
-    $E(z)^gamma = (sqrt(Omega_M (1+z)^3 + Omega_k (1+z)^2 + Omega_lambda))^gamma$.
+    Account for cluster evolution by adjusting $L$ by the standard evolution factor $E(z)$
   ]
 ]
 
@@ -575,17 +599,32 @@
   = Scaling Relations -- Fitting
   Rather than simple least squares regression I used Sereno~(2015)\'s #teq-emph("LI")near #teq-emph("R")egression in #teq-emph("A")stronomy (LIRA) package.
 
-  #uncover((2,3,4))[
-    Improvement as it does #teq-emph("Bayesian") linear regression and can account for intrinsic scatters and biases from selection effects. 
+  #uncover((2,3))[
+    #grid(
+      columns: (40%, 1fr),
+      column-gutter: 10pt,
+      [
+        Improvement as it does #teq-emph("Bayesian") linear regression and can account for intrinsic scatters and biases from selection effects. 
+      ],
+      [
+        #image("assets/hmf-lm.png")
+      ]
+    )
   ]
 
-  #uncover((3,4))[
+  #uncover(3)[
+    #set align(center)
+    See #teq-emph("Zoe Altria's") talk on her work fitting scaling relations!
+  ]
+
+  /*#uncover((3,4))[
     To aid LIRA and #teq-emph("reduce degeneracies"), I set pivots on my data at: $L_0 = 10^(43)$ erg s#super($-1$), $k T_0 = 3.55$ keV, and $lambda_0 = 109$. 
   ]
 
   #uncover(4)[
     For bias modelling, I set these thresholds: $L$#sub("thresh") $ = 10^(43.5)$ erg s#super($-1$) and $lambda$#sub("thresh") $ = 10$ for the #teq-emph("eRASS selected", fill_col: TERTIARY_COLOR) clusters, and $lambda$#sub("thresh") $ = 43.7$ for the #teq-emph("optically selected") sample.
   ]
+  */
 ]
 
 #[
