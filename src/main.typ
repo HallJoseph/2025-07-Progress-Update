@@ -47,7 +47,7 @@
       #v(1fr)
 
       #emph[#location]
-
+      
       #date
     ]
 }
@@ -668,7 +668,7 @@
     ],
     [
       #set align(right)
-      #image("assets/restab.svg", width: 100%)
+      #image("assets/restab.png", width: 100%)
       #image("assets/scalingrels.svg")
     ]
   )
